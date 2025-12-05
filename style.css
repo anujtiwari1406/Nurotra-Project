@@ -47,10 +47,7 @@
 /* BACKGROUND */
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background:
-  radial-gradient(circle at 40% 0%, rgba(90,150,255,0.35), transparent 55%),
-  radial-gradient(circle at 80% 40%, rgba(0,140,255,0.18), transparent 70%),
-  linear-gradient(to bottom, #fafdff, #e8f3ff 45%, #dcecff 100%);
+  
 
   color: var(--text-main);
   min-height: 100vh;
@@ -68,6 +65,23 @@ body {
     animation: gridMove 25s linear infinite;
 
 }
+
+/* TRUE PREMIUM LIGHT BACKGROUND */
+/* ULTRA PREMIUM LIGHT MODE BACKGROUND */
+:root:not([data-theme="dark"]) body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(130,160,255,0.55), rgba(255,255,255,0) 70%),
+    radial-gradient(circle at 85% 20%, rgba(180,120,255,0.45), rgba(255,255,255,0) 75%),
+    radial-gradient(circle at 50% 95%, rgba(120,220,255,0.45), rgba(255,255,255,0) 70%),
+    linear-gradient(to bottom right, #eef2ff, #e6ecff, #f5f7ff);
+
+  background-blend-mode: screen;
+  background-size: cover;
+  filter: brightness(1.12) saturate(1.22);
+}
+
+
+
 .background-glow {
   position: fixed;
   top: -200px;
