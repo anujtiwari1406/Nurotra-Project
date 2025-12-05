@@ -154,12 +154,15 @@ header {
 
   transition: background 0.25s ease, backdrop-filter 0.25s ease, border 0.25s ease;
 }
-
-header.scrolled {
-  background: rgba(255, 255, 255, 0.15); /* light frosted */
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+/* LIGHT MODE – Glassy Light Grey Navbar */
+:root[data-theme="light"] header.scrolled {
+  background: rgba(148, 148, 159, 0.65); /* soft grey glass */
+  backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.35);
 }
+
+
+
 :root[data-theme="dark"] header.scrolled {
   background: rgba(15, 23, 42, 0.55); /* dark frosted glass */
   border-bottom: 1px solid rgba(255,255,255,0.06);
