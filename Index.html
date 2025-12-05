@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workforce</title>
+  <link rel="stylesheet" href="style.css">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background-glow"></div>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="background-glow"></div>
+
+
+  <header>
+
+
+    <div class="logo-wrap">
+  <div class="logo-bg-glow"></div>
+  <img src="NurotraLogo.png" alt="Nurotra Logo" class="nav-logo" />
+  <div class="logo">Nurotra</div>
+</div>
+
+
+
+    <nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <a href="#">Login</a>
+      <button class="btn-primary">Sign Up</button>
+    </nav>
+  </header>
+
+  
+<div class="hero-logo-wrap">
+  <img src="NurotraLogo.png" class="hero-logo" alt="Nurotra Logo" />
+</div>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>
+      Meet Your <span class="gradient-text">AI Workforce</span>
+    </h1>
+    <p>Specialized AI agents ready to work for you.</p>
+
+    <div class="search-wrapper">
+      <input class="search-bar" type="text" placeholder="Search your agents...">
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <div class="categories">
+    <span class="active">All</span>
+    <span>Engineering</span>
+    <span>Marketing</span>
+    <span>Research</span>
+    <span>Operations</span>
+    <span>Finance</span>
+  </div>
+
+  <!-- AGENTS GRID -->
+  <section class="agents-grid">
+
+    <div class="agent-card">
+      <div class="agent-inner">
+        <div class="icon">👨‍💻</div>
+        <h3>Code Engineer AI</h3>
+        <p class="role">Senior Developer</p>
+        <p class="skills">Bug fixing · Code generation</p>
+        <div class="status-row">
+          <span class="status-pill online"><span class="dot"></span>Online</span>
+          <a href="#" class="details-link">View profile →</a>
+        </div>
+        <button class="btn-secondary">Start Task</button>
+      </div>
+    </div>
+
+    <div class="agent-card">
+      <div class="agent-inner">
+        <div class="icon">📣</div>
+        <h3>Marketing Expert AI</h3>
+        <p class="role">Brand Strategist</p>
+        <p class="skills">Ads · Reels · Branding</p>
+        <div class="status-row">
+          <span class="status-pill online"><span class="dot"></span>Online</span>
+          <a href="#" class="details-link">View profile →</a>
+        </div>
+        <button class="btn-secondary">Start Task</button>
+      </div>
+    </div>
+
+    <div class="agent-card">
+      <div class="agent-inner">
+        <div class="icon">🔍</div>
+        <h3>Research Analyst AI</h3>
+        <p class="role">Problem Solver</p>
+        <p class="skills">Insights · Summaries</p>
+        <div class="status-row">
+          <span class="status-pill idle"><span class="dot"></span>Idle</span>
+          <a href="#" class="details-link">View profile →</a>
+        </div>
+        <button class="btn-secondary">Start Task</button>
+      </div>
+    </div>
+
+    <div class="agent-card">
+      <div class="agent-inner">
+        <div class="icon">💼</div>
+        <h3>Operations Manager AI</h3>
+        <p class="role">Scheduling Specialist</p>
+        <p class="skills">Planning · Reminders</p>
+        <div class="status-row">
+          <span class="status-pill online"><span class="dot"></span>Online</span>
+          <a href="#" class="details-link">View profile →</a>
+        </div>
+        <button class="btn-secondary">Start Task</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Nurotra — AI Workforce Platform
+  </footer>
+
+  <script>
+    // Simple dark/light theme toggle with localStorage
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+
+    const storedTheme = localStorage.getItem('theme') || 'light';
+    root.setAttribute('data-theme', storedTheme);
+    toggleBtn.textContent = storedTheme === 'dark' ? '☀️' : '🌙';
+
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  </script>
+
+</body>
+</html>
